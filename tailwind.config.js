@@ -9,6 +9,10 @@ export default {
       colors: {
         primaryLight: colors.pink,
         primaryDark: colors.teal,
+        success: colors.green,
+        danger: colors.red,
+        warning: colors.amber,
+        info: colors.sky,
       },
     },
   },
