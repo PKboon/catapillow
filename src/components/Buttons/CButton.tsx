@@ -1,12 +1,17 @@
-export const CButton = () => {
+import { ComponentProps } from "react";
+
+type CButtonProps = ComponentProps<"button">;
+
+export const CButton = ({ ...props }: CButtonProps) => {
   return (
     <button
       className="
-        flex justify-between items-center shadow p-2 rounded-full
+        flex items-center shadow py-2 px-3 rounded-full font-semibold text-sm
         bg-pink-500 text-pink-50
       "
+      {...props}
     >
-      CButton
+      {props.children}
     </button>
   );
 };
