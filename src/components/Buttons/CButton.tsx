@@ -5,6 +5,7 @@ import { ComponentProps, forwardRef } from "react";
 const styles = cva(
   [
     "flex",
+    "gap-1",
     "items-center",
     "enabled:shadow-md",
     "py-1.5",

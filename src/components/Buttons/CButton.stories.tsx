@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { CIcon } from "../Icons/CIcon";
 import { CButton } from "./CButton";
 
 const meta: Meta<typeof CButton> = {
@@ -13,6 +14,23 @@ const meta: Meta<typeof CButton> = {
 export default meta;
 
 type Story = StoryObj<typeof meta>;
+
+export const Example: Story = {
+  args: {
+    color: "secondary",
+    disabled: false,
+    className: "justify-between w-40",
+  },
+  render: (args) => (
+    <CButton {...args}>
+      <span className="flex gap-1 items-center">
+        <CIcon icon="mdi:menu" />
+        Menu
+      </span>
+      <CIcon icon="mdi:chevron-down" />
+    </CButton>
+  ),
+};
 
 export const Primary: Story = {
   args: {
