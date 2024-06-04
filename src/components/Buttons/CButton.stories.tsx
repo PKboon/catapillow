@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Example: Story = {
   args: {
-    color: "secondary",
+    ctype: "secondary",
     disabled: false,
     className: "justify-between w-40",
   },
@@ -35,7 +35,7 @@ export const Example: Story = {
 export const Primary: Story = {
   args: {
     children: "Button",
-    color: "primary",
+    ctype: "primary",
     disabled: false,
   },
 };
@@ -43,7 +43,7 @@ export const Primary: Story = {
 export const Secondary: Story = {
   args: {
     children: "Button",
-    color: "secondary",
+    ctype: "secondary",
     disabled: false,
   },
 };
@@ -51,7 +51,7 @@ export const Secondary: Story = {
 export const Success: Story = {
   args: {
     children: "Button",
-    color: "success",
+    ctype: "success",
     disabled: false,
   },
 };
@@ -59,7 +59,7 @@ export const Success: Story = {
 export const Danger: Story = {
   args: {
     children: "Button",
-    color: "danger",
+    ctype: "danger",
     disabled: false,
   },
 };
@@ -67,7 +67,7 @@ export const Danger: Story = {
 export const Warning: Story = {
   args: {
     children: "Button",
-    color: "warning",
+    ctype: "warning",
     disabled: false,
   },
 };
@@ -75,7 +75,7 @@ export const Warning: Story = {
 export const Info: Story = {
   args: {
     children: "Button",
-    color: "info",
+    ctype: "info",
     disabled: false,
   },
 };

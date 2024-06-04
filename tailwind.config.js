@@ -13,6 +13,14 @@ export default {
         danger: colors.red,
         warning: colors.amber,
         info: colors.sky,
+
+        bgPrimaryLight: colors.slate[100],
+        bgPrimaryDark: colors.slate[800],
+        bgSecondaryLight: "#ffffff",
+        bgSecondaryDark: "#272A2D",
+
+        textLight: colors.slate[800],
+        textDark: colors.slate[100],
       },
     },
   },

@@ -20,12 +20,9 @@ export const Example: Story = {
   },
   render: (args) => (
     <div className="flex gap-2 items-center">
-      <CIcon size="xxs" {...args} />
-      <CIcon size="xs" {...args} />
+      <CIcon size="sm" {...args} />
       <CIcon size="md" {...args} />
       <CIcon size="lg" {...args} />
-      <CIcon size="xl" {...args} />
-      <CIcon size="xxl" {...args} />
     </div>
   ),
 };
