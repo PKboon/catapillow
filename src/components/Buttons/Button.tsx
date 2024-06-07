@@ -90,9 +90,9 @@ const styles = cva(
   }
 );
 
-type CButtonProps = ComponentProps<"button"> & VariantProps<typeof styles>;
+type ButtonProps = ComponentProps<"button"> & VariantProps<typeof styles>;
 
-export const CButton = forwardRef<HTMLButtonElement, CButtonProps>(
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ ctype, className, children, ...props }, ref) => {
     return (
       <button ref={ref} className={cn(styles({ ctype, className }))} {...props}>

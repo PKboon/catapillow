@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { CIcon } from "./CIcon";
+import { Symbol } from "./Symbol";
 
-const meta: Meta<typeof CIcon> = {
-  title: "Components/Icons/CIcon",
-  component: CIcon,
+const meta: Meta<typeof Symbol> = {
+  title: "Components/Symbols/Symbol",
+  component: Symbol,
   parameters: {
     layout: "centered",
   },
@@ -16,13 +16,13 @@ type Story = StoryObj<typeof meta>;
 
 export const Example: Story = {
   args: {
-    icon: "mdi:home",
+    symbol: "mdi:home",
   },
   render: (args) => (
     <div className="flex gap-2 items-center">
-      <CIcon size="sm" {...args} />
-      <CIcon size="md" {...args} />
-      <CIcon size="lg" {...args} />
+      <Symbol size="sm" {...args} />
+      <Symbol size="md" {...args} />
+      <Symbol size="lg" {...args} />
     </div>
   ),
 };

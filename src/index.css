@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .feature-hr {
+    @apply border-slate-500;
+  }
+
+  .feature-vt {
+    @apply border-t-0 border-l border-solid border-slate-500 h-auto;
+  }
+}

@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { CIcon } from "../Icons/CIcon";
-import { CButton } from "./CButton";
+import { Symbol } from "../Symbols/Symbol";
+import { Button } from "./Button";
 
-const meta: Meta<typeof CButton> = {
-  title: "Components/Buttons/CButton",
-  component: CButton,
+const meta: Meta<typeof Button> = {
+  title: "Components/Buttons/Button",
+  component: Button,
   parameters: {
     layout: "centered",
   },
@@ -28,13 +28,13 @@ export const Example: Story = {
     className: "justify-between w-40",
   },
   render: (args) => (
-    <CButton {...args}>
+    <Button {...args}>
       <span className="flex gap-1 items-center">
-        <CIcon icon="mdi:menu" />
+        <Symbol symbol="mdi:menu" />
         Menu
       </span>
-      <CIcon icon="mdi:chevron-down" />
-    </CButton>
+      <Symbol symbol="mdi:chevron-down" />
+    </Button>
   ),
 };
 

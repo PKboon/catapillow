@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { CButton } from "../Buttons/CButton";
-import { CTooltip } from "./CTooltip";
+import { Button } from "../Buttons/Button";
+import { Tooltip } from "./Tooltip";
 
-const meta: Meta<typeof CTooltip> = {
-  title: "Components/Tooltips/CTooltip",
-  component: CTooltip,
+const meta: Meta<typeof Tooltip> = {
+  title: "Components/Tooltips/Tooltip",
+  component: Tooltip,
   parameters: {
     layout: "centered",
   },
@@ -19,7 +19,7 @@ export const Example1: Story = {
   args: {
     tooltip: "Hi! I'm a tooltip",
   },
-  render: (args) => <CTooltip {...args}>Hover me</CTooltip>,
+  render: (args) => <Tooltip {...args}>Hover me</Tooltip>,
 };
 
 export const Example2: Story = {
@@ -27,8 +27,8 @@ export const Example2: Story = {
     tooltip: "Click me",
   },
   render: (args) => (
-    <CTooltip {...args}>
-      <CButton>I'm a button</CButton>
-    </CTooltip>
+    <Tooltip {...args}>
+      <Button>I'm a button</Button>
+    </Tooltip>
   ),
 };

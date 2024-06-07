@@ -16,10 +16,10 @@ const styles = cva([
   "text-nowrap",
 ]);
 
-type CTooltipProps = ComponentProps<"div"> &
+type TooltipProps = ComponentProps<"div"> &
   VariantProps<typeof styles> & { tooltip: string };
 
-export const CTooltip = forwardRef<HTMLDivElement, CTooltipProps>(
+export const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
   ({ children, className, tooltip, ...props }, ref) => {
     return (
       <div

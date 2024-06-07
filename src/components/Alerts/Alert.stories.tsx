@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { CButton } from "../Buttons/CButton";
-import { CAlert } from "./CAlert";
+import { Button } from "../Buttons/Button";
+import { Alert } from "./Alert";
 
-const meta: Meta<typeof CAlert> = {
-  title: "Components/Alerts/CAlert",
-  component: CAlert,
+const meta: Meta<typeof Alert> = {
+  title: "Components/Alerts/Alert",
+  component: Alert,
   parameters: {
     layout: "centered",
   },
@@ -28,7 +28,7 @@ export const Default: Story = {
     ctype: "default",
   },
   render: (args) => (
-    <CAlert {...args}>
+    <Alert {...args}>
       <p className="text-sm">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -36,10 +36,10 @@ export const Default: Story = {
         commodo consequat.
       </p>
       <div className="flex gap-3 mt-5 justify-end">
-        <CButton ctype="secondary">Decline</CButton>
-        <CButton ctype="success">Accept</CButton>
+        <Button ctype="secondary">Decline</Button>
+        <Button ctype="success">Accept</Button>
       </div>
-    </CAlert>
+    </Alert>
   ),
 };
 
@@ -49,9 +49,9 @@ export const Success: Story = {
     header: "Successfully submitted!",
   },
   render: (args) => (
-    <CAlert {...args}>
+    <Alert {...args}>
       <p className="text-sm">Lorem ipsum dolor sit amet.</p>
-    </CAlert>
+    </Alert>
   ),
 };
 
@@ -62,7 +62,7 @@ export const Danger: Story = {
     dismissable: true,
   },
   render: (args) => (
-    <CAlert {...args}>
+    <Alert {...args}>
       <ul className="list-disc text-sm ps-5">
         <li>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -77,7 +77,7 @@ export const Danger: Story = {
         </li>
         <li>Commodo consequat</li>
       </ul>
-    </CAlert>
+    </Alert>
   ),
 };
 
@@ -87,12 +87,12 @@ export const Warning: Story = {
     header: "Oops!",
   },
   render: (args) => (
-    <CAlert {...args}>
+    <Alert {...args}>
       <p className="text-sm">No results found.</p>
       <div className="flex gap-3 mt-5 justify-center">
-        <CButton ctype="secondary">OK</CButton>
+        <Button ctype="secondary">OK</Button>
       </div>
-    </CAlert>
+    </Alert>
   ),
 };
 
@@ -103,7 +103,7 @@ export const Info: Story = {
     dismissable: true,
   },
   render: (args) => (
-    <CAlert {...args}>
+    <Alert {...args}>
       <ol className="list-decimal text-sm ps-5">
         <li>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -113,6 +113,6 @@ export const Info: Story = {
           Tempor incididunt ut labore et dolore magna aliqua ut enim ad minim
         </li>
       </ol>
-    </CAlert>
+    </Alert>
   ),
 };

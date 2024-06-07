@@ -1,9 +1,8 @@
 import { cn } from "@/utils";
-import { IconProps } from "@iconify/react/dist/iconify.js";
 import { VariantProps, cva } from "class-variance-authority";
 import { ComponentProps, forwardRef } from "react";
-import { CIcon } from "../Icons/CIcon";
-import { CTooltip } from "../Tooltips/CTooltip";
+import { Symbol } from "../Symbols/Symbol";
+import { Tooltip } from "../Tooltips/Tooltip";
 
 const styles = cva(
   [
@@ -32,18 +31,20 @@ const styles = cva(
   }
 );
 
-type CActionIconButtonProps = ComponentProps<"button"> &
-  IconProps & { tooltip: string } & VariantProps<typeof styles>;
+type SymbolButtonProps = ComponentProps<"button"> &
+  VariantProps<typeof styles> & {
+    tooltip: string;
+    symbol: string;
+  };
 
-export const CActionIconButton = forwardRef<
-  HTMLButtonElement,
-  CActionIconButtonProps
->(({ tooltip, icon, size, ...props }, ref) => {
-  return (
-    <CTooltip tooltip={tooltip}>
-      <button ref={ref} className={cn(styles({ size }))} {...props}>
-        <CIcon icon={icon} size={size} />
-      </button>
-    </CTooltip>
-  );
-});
+export const SymbolButton = forwardRef<HTMLButtonElement, SymbolButtonProps>(
+  ({ tooltip, symbol, size, ...props }, ref) => {
+    return (
+      <Tooltip tooltip={tooltip}>
+        <button ref={ref} className={cn(styles({ size }))} {...props}>
+          <Symbol symbol={symbol} size={size} />
+        </button>
+      </Tooltip>
+    );
+  }
+);

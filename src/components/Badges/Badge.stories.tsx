@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { CBadge } from "./CBadge";
+import { Badge } from "./Badge";
 
-const meta: Meta<typeof CBadge> = {
-  title: "Components/Badges/CBadge",
-  component: CBadge,
+const meta: Meta<typeof Badge> = {
+  title: "Components/Badges/Badge",
+  component: Badge,
   parameters: {
     layout: "centered",
   },
@@ -23,7 +23,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: "Jane Doe",
-    iconLeft: "mdi:user",
+    symbolLeft: "mdi:user",
     ctype: "default",
   },
 };
@@ -31,7 +31,7 @@ export const Default: Story = {
 export const Success: Story = {
   args: {
     children: "versions",
-    iconRight: "material-symbols:keyboard-arrow-down-rounded",
+    symbolRight: "material-symbols:keyboard-arrow-down-rounded",
     ctype: "success",
     className: "cursor-pointer",
   },
@@ -40,8 +40,8 @@ export const Success: Story = {
 export const Danger: Story = {
   args: {
     children: "text",
-    iconLeft: "mdi:home",
-    iconRight: "mdi:home",
+    symbolLeft: "mdi:home",
+    symbolRight: "mdi:home",
     ctype: "danger",
   },
 };

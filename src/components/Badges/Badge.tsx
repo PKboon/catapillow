@@ -1,7 +1,7 @@
-import { cn } from "@/utils";
+import { cn, getPadding } from "@/utils";
 import { VariantProps, cva } from "class-variance-authority";
 import { ComponentProps, forwardRef } from "react";
-import { CIcon } from "../Icons/CIcon";
+import { Symbol } from "../Symbols/Symbol";
 
 const styles = cva(
   [
@@ -29,32 +29,27 @@ const styles = cva(
   }
 );
 
-type CBadgeProps = ComponentProps<"div"> &
+type BadgeProps = ComponentProps<"div"> &
   VariantProps<typeof styles> & {
-    iconLeft: string;
-    iconRight: string;
+    symbolLeft: string;
+    symbolRight: string;
     text: string;
   };
 
-export const CBadge = forwardRef<HTMLDivElement, CBadgeProps>(
-  ({ ctype, className, iconLeft, iconRight, children, ...props }, ref) => {
-    const getPadding = () => {
-      if (!iconLeft && !iconRight) return "p-2";
-
-      const paddingY = "py-0.5 ";
-      if (iconLeft && iconRight) return `${paddingY} px-1`;
-      if (iconLeft) return `${paddingY} pr-1.5 pl-1`;
-      if (iconRight) return `${paddingY} pr-1 pl-1.5`;
-    };
+export const Badge = forwardRef<HTMLDivElement, BadgeProps>(
+  ({ ctype, className, symbolLeft, symbolRight, children, ...props }, ref) => {
     return (
       <div
         ref={ref}
-        className={cn(styles({ ctype, className }), getPadding())}
+        className={cn(
+          styles({ ctype, className }),
+          getPadding(symbolLeft, symbolRight)
+        )}
         {...props}
       >
-        {iconLeft && <CIcon icon={iconLeft} className="text-sm" />}
+        <Symbol symbol={symbolLeft} className="text-sm" />
         {children}
-        {iconRight && <CIcon icon={iconRight} className="text-sm" />}
+        <Symbol symbol={symbolRight} className="text-sm" />
       </div>
     );
   }
