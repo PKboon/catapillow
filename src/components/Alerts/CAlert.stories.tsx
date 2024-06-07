@@ -8,6 +8,12 @@ const meta: Meta<typeof CAlert> = {
   parameters: {
     layout: "centered",
   },
+  argTypes: {
+    ctype: {
+      options: ["default", "success", "danger", "warning", "info"],
+      control: "radio",
+    },
+  },
   tags: ["autodocs"],
 };
 
@@ -19,6 +25,7 @@ export const Default: Story = {
   args: {
     header: "Header",
     dismissable: true,
+    ctype: "default",
   },
   render: (args) => (
     <CAlert {...args}>

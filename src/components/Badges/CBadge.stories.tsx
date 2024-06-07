@@ -7,6 +7,12 @@ const meta: Meta<typeof CBadge> = {
   parameters: {
     layout: "centered",
   },
+  argTypes: {
+    ctype: {
+      options: ["default", "success", "danger", "warning", "info"],
+      control: "radio",
+    },
+  },
   tags: ["autodocs"],
 };
 

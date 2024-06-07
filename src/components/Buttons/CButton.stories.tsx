@@ -8,6 +8,12 @@ const meta: Meta<typeof CButton> = {
   parameters: {
     layout: "centered",
   },
+  argTypes: {
+    ctype: {
+      options: ["primary", "secondary", "success", "danger", "warning", "info"],
+      control: "radio",
+    },
+  },
   tags: ["autodocs"],
 };
 

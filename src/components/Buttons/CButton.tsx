@@ -15,8 +15,8 @@ const styles = cva(
     "text-sm",
     "focus:outline-none",
     "disabled:cursor-not-allowed",
-    "disabled:bg-slate-400",
-    "disabled:text-slate-700",
+    "disabled:bg-slate-300",
+    "disabled:text-slate-500",
     "disabled:opacity-65",
   ],
   {
