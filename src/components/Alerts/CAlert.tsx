@@ -15,7 +15,7 @@ const styles = cva(
   {
     variants: {
       ctype: {
-        normal: [],
+        default: [],
         success: [],
         danger: [],
         warning: [],
@@ -23,7 +23,7 @@ const styles = cva(
       },
     },
     defaultVariants: {
-      ctype: "normal",
+      ctype: "default",
     },
   }
 );
