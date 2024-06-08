@@ -31,9 +31,8 @@ const styles = cva(
 
 type BadgeProps = ComponentProps<"div"> &
   VariantProps<typeof styles> & {
-    symbolLeft: string;
-    symbolRight: string;
-    text: string;
+    symbolLeft?: string;
+    symbolRight?: string;
   };
 
 export const Badge = forwardRef<HTMLDivElement, BadgeProps>(

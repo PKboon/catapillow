@@ -3,7 +3,7 @@ import { create } from "@storybook/theming/create";
 
 const theme = create({
   base: "light",
-  brandTitle: "<img src='/logo.png' alt='Catapillow'/>",
+  brandTitle: "<img src='/logo.png' alt='Catapillow' />",
 });
 
 addons.setConfig({

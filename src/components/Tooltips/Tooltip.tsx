@@ -5,14 +5,14 @@ import { ComponentProps, forwardRef } from "react";
 const styles = cva([
   "absolute",
   "-top-7",
-  "opacity-0",
+  "hidden",
   "transition-opacity",
   "rounded",
   "bg-slate-800 dark:bg-slate-900",
   "p-1 px-2",
   "text-xs",
   "text-slate-100",
-  "group-hover:opacity-100",
+  "group-hover:block",
   "text-nowrap",
 ]);
 
