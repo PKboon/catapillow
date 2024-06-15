@@ -42,7 +42,7 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
       switch (ctype) {
         case "success":
           return {
-            symbol: "herosymbols:check-circle-16-solid",
+            symbol: "material-symbols:check-circle-rounded",
             symbolBg: "bg-success-500",
           };
         case "danger":
