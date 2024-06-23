@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { Symbol } from "../Symbols/Symbol";
 import { Selectable } from "./Selectable";
 
 const meta: Meta<typeof Selectable> = {
@@ -38,8 +39,15 @@ export const Radio: Story = {
 
 export const Switch: Story = {
   args: {
-    children: "Label",
     id: "switchId",
     type: "switch",
   },
+  render: (args) => (
+    <Selectable {...args}>
+      <div className="flex gap-.5 items-center">
+        VIP
+        <Symbol symbol="mdi:asterisk" className="text-danger-500" size="sm" />
+      </div>
+    </Selectable>
+  ),
 };

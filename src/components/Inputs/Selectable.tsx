@@ -10,15 +10,15 @@ const styles = cva([
 const inputStyles = [
   "appearance-none -mt-[1px] h-4 bg-transparent",
   "border border-solid border-slate-400 outline-none",
-  "checked:bg-primaryLight-500 dark:checked:bg-primaryDark-500",
-  "checked:border-primaryLight-500 dark:checked:border-primaryDark-500",
-  "checked:focus:border-primaryLight-500",
+  "checked:bg-primaryLight-400 dark:checked:bg-primaryDark-400",
+  "checked:border-primaryLight-400 dark:checked:border-primaryDark-400",
+  "checked:focus:border-primaryLight-400",
   "checked:after:bg-bgPrimaryLight dark:checked:after:bg-bgPrimaryDark",
   "checked:after:absolute",
   "disabled:opacity-60",
   "focus:shadow-none focus:outline-none",
   "focus:ring-4 focus:ring-slate-400/30 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-black",
-  "focus:checked:ring-primaryLight-500/30 dark:focus:checked:ring-primaryDark-500/40 focus:checked:ring-offset-white dark:focus:checked:ring-offset-black",
+  "focus:checked:ring-primaryLight-400/30 dark:focus:checked:ring-primaryDark-400/40 focus:checked:ring-offset-white dark:focus:checked:ring-offset-black",
   "hover:cursor-pointer",
 ];
 
@@ -63,7 +63,7 @@ export const Selectable = forwardRef<HTMLInputElement, SelectableProps>(
               -ms-[1.5rem] w-4 rounded
               checked:after:block
               checked:after:ms-[0.25rem]
-              checked:after:h-[0.65rem] checked:after:w-[0.35rem] checked:after:rotate-45 checked:after:border-[.18rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-bgPrimaryLight dark:checked:after:border-bgPrimaryDark checked:after:bg-transparent dark:checked:after:bg-primaryDark-500 checked:after:content-['']
+              checked:after:h-[0.65rem] checked:after:w-[0.35rem] checked:after:rotate-45 checked:after:border-[.18rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-bgPrimaryLight dark:checked:after:border-bgPrimaryDark checked:after:bg-transparent dark:checked:after:bg-primaryDark-400 checked:after:content-['']
               focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded focus:after:content-['']
               checked:focus:after:ms-[0.25rem] checked:focus:after:h-[0.65rem] checked:focus:after:w-[0.35rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-bgPrimaryLight dark:checked:focus:after:border-bgPrimaryDark checked:focus:after:bg-transparent
             `}
