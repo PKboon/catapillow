@@ -54,22 +54,6 @@ export const Selectable = forwardRef<HTMLInputElement, SelectableProps>(
           />
         )}
 
-        {type === "radio" && (
-          <input
-            id={id}
-            type="radio"
-            className={`
-              ${inputStyles.join(" ")}
-              -ms-[1.5rem] w-4 rounded-full
-              after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-['']
-              checked:after:ms-[7px] checked:after:mt-[7px]
-              checked:after:h-[0.5rem] checked:after:w-[0.5rem]
-              checked:after:rounded-full checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)]
-            `}
-            {...props}
-          />
-        )}
-
         {type === "checkbox" && (
           <input
             id={id}
@@ -82,6 +66,22 @@ export const Selectable = forwardRef<HTMLInputElement, SelectableProps>(
               checked:after:h-[0.65rem] checked:after:w-[0.35rem] checked:after:rotate-45 checked:after:border-[.18rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-bgPrimaryLight dark:checked:after:border-bgPrimaryDark checked:after:bg-transparent dark:checked:after:bg-primaryDark-500 checked:after:content-['']
               focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded focus:after:content-['']
               checked:focus:after:ms-[0.25rem] checked:focus:after:h-[0.65rem] checked:focus:after:w-[0.35rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-bgPrimaryLight dark:checked:focus:after:border-bgPrimaryDark checked:focus:after:bg-transparent
+            `}
+            {...props}
+          />
+        )}
+
+        {type === "radio" && (
+          <input
+            id={id}
+            type="radio"
+            className={`
+              ${inputStyles.join(" ")}
+              -ms-[1.5rem] w-4 rounded-full
+              after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-['']
+              checked:after:ms-[7px] checked:after:mt-[7px]
+              checked:after:h-[0.5rem] checked:after:w-[0.5rem]
+              checked:after:rounded-full checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)]
             `}
             {...props}
           />
