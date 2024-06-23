@@ -46,7 +46,7 @@ export const Field = forwardRef<HTMLInputElement, FieldProps>(
     },
     ref
   ) => {
-    const getAlertDecors = () => {
+    const getInputStyles = () => {
       switch (ctype) {
         case "success":
           return {
@@ -89,12 +89,12 @@ export const Field = forwardRef<HTMLInputElement, FieldProps>(
             id={id}
             value={value}
             onChange={onChange}
-            className={`${inputStyles.join(" ")} ${getAlertDecors().borderColor}`}
+            className={`${inputStyles.join(" ")} ${getInputStyles().borderColor}`}
             placeholder=" "
           />
           <label
             htmlFor={id}
-            className={`${labelStyles.join(" ")} ${getAlertDecors().textColor}`}
+            className={`${labelStyles.join(" ")} ${getInputStyles().textColor}`}
           >
             {children}
           </label>
@@ -119,11 +119,11 @@ export const Field = forwardRef<HTMLInputElement, FieldProps>(
 
           {footer && (
             <div
-              className={`${getAlertDecors().textColor} flex gap-0.5 items-center text-xs mt-0.5 px-0.5`}
+              className={`${getInputStyles().textColor} flex gap-0.5 items-center text-xs mt-0.5 px-0.5`}
             >
               <Symbol
-                className={`${getAlertDecors().textColor}`}
-                symbol={getAlertDecors().symbol}
+                className={`${getInputStyles().textColor}`}
+                symbol={getInputStyles().symbol}
                 size="md"
               />
               {footer}
